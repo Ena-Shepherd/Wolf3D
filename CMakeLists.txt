@@ -6,7 +6,7 @@ project(${NAME})
 
 set(SRC
 	src/main.cpp
-	src/example.cpp
+	src/window.cpp
 )
 
 add_executable(${NAME} ${SRC})
