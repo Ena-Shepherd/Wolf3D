@@ -39,6 +39,7 @@ if (CMAKE_HOST_SYSTEM MATCHES Windows)
 		sfml-graphics
 		sfml-window
 		sfml-system
+		opengl32
 	)
 
 endif()
