@@ -10,10 +10,12 @@ include_directories("./libraries/SFML-2.6.0/include")
 link_directories("./libraries/SFML-2.6.0/lib")
 
 add_executable(${NAME} ${SOURCES})
-target_link_libraries(
-	${NAME}
-	sfml-graphics
-	sfml-window
-	sfml-system
-	GL GLU GLEW glfw
-)
+if (CMAKE_HOST_SYSTEM MATCHES Linux)
+	target_link_libraries(
+		${NAME}
+		sfml-graphics
+		sfml-window
+		sfml-system
+		GL GLU GLEW glfw
+	)
+endif()
